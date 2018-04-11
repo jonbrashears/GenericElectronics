@@ -1,0 +1,264 @@
+	a{	
+		color: black;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+	
+	.jumbotron {
+	  background-color: Black;
+	  padding: 1%;
+      margin-bottom: 0;
+	  border-radius: 0;
+    }
+	
+	.jumbotron a{
+	 font-family: "Arial";
+	 color: White;
+	}
+	
+	.container h1{
+		text-align: center;
+		padding-bottom: 2%;
+		
+	}
+	
+   .navbar {
+	  background-color: Black;
+	  margin-bottom: 5%;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	  padding-right: 20px;
+      border-radius: 0;
+    }
+	.navbar a:hover{
+		color: white;
+		text-decoration: none;
+	}
+	
+	.mavbar .dropdown-:hover{
+		text-decoration: none;
+		color: white;
+	}
+	
+	.dropdown-toggle{
+	text-decoration: none;	
+	}
+	
+	.dropdown-toggle:hover{
+		text-decoration: none;
+		background-color: black;
+		color: white;
+	}
+	
+	.navbar .dropdown{
+		position: relative;
+	}
+	.navbar .dropdown-item{
+		font-family: "Arial";
+		color: white;
+	}
+	
+	.navbar .dropdown-item:hover{
+		font-family: "Arial";
+		text-decoration: none;
+		background-color: black;
+		color: black;
+	}
+	
+	.navbar .dropdown-menu{
+		position: absolute;
+		background-color: black;
+	}
+	
+	.btn-link {
+		font-family: "Arial";
+		color: white;
+	}
+	
+	.container-jb {
+		width: 1000px;
+		min-height:450px;
+		margin: auto;
+		margin-bottom: 50px;
+	}
+	
+	.fb-jb h1{
+		font-family: "Arial";
+	}
+	
+	.col-sm-4 {
+		text-align: center;
+	}
+	
+	.row-jb {
+		width: 100%;
+		min-height:450px;
+		
+	}
+	
+	.genre-container {
+		text-align: center;
+		margin-top: 50px;
+	}
+	
+	.genre-item {
+		float: left;
+		width: 222px;
+		height: 40px;
+		text-align: center;
+		margin: 20px;
+		}
+		
+	.genre-item p{
+		font-family: "Arial";
+		font-size: 25px;
+	}	
+	
+	.container-genre-main {
+			width: 900px;
+			min-height: 280px;
+			border-style: solid;
+			border-width: 2px;
+			margin-bottom: 5px;
+			overflow: hidden;
+		}
+	
+	
+	
+	.genre-left {
+		margin-top: 25px;
+		float: left;
+		width: 300px;
+		min-height: 225px;
+		text-align: center;
+		padding: 8px;
+	}
+
+	.genre-right {
+		float: right;
+		width: 500px;
+		min-height: 225px;
+		text-align: left;
+		margin: auto;
+		padding: 5px;
+		padding-left: 0px;
+		overflow:hidden;
+	}
+	
+	.genre-right .more:hover{
+		cursor: pointer;
+		
+	}
+	
+	.genre-right h2{
+		font-size: 20px;
+	}
+	.genre-text{
+		font-family: "Arial";
+		color: black;
+		font-size: 25px;
+	}
+
+	.left-main {
+		float: left;
+		text-align: right;
+		min-height: 450px;
+		width: 450px;
+		margin-bottom: 100px;
+	}
+	
+	.right-main{
+		float: right;
+		min-height: 450px;
+		width: 450px;
+		padding: 25px;
+		margin-bottom: 100px;
+	}
+	
+	.jbbutton{
+		background-color: black;
+		color: white;
+	}
+	
+	input[type=text],input[type=password]
+	{
+	font-family: "Arial";
+    width: 25%;
+    padding: 5px;	
+	margin: 8px 8px;
+    display: inline-block;
+    border: 2px;
+    background: #f1f1f1;
+	}
+	
+	button[type="submit"]
+	{
+	font-family: "Arial";
+	background-color: Black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;	
+	}
+	
+    footer {
+      background-color: black;
+	  color: white;
+	  bottom: 0;
+	  margin-top: 50px;
+	  text-align:center;
+	  position:fixed;
+	  width: 100%;
+	  font-family: "Arial";
+    }	
+	
+	div[name="profile_box"]
+{
+	font-family: "Arial";
+	border-color: black;
+    border-style: solid;
+    border-width: 1px;
+	padding:15px;
+	width: 30%;
+	margin: 8px 8px;
+	font-size: 15px;
+}
+
+button[name="password_ch"]
+	{
+	font-family: "Arial";
+	background-color: Black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;	
+	}
+div[name="username"]
+{
+	font-family: "Arial";
+	text-align: center;
+	font-size: 25px;
+}
+div[name="prim"]
+{
+	font-family: "Arial";
+	font-size: 20px;
+}
+
+button[name="edit_1"],button[name="edit_2"]
+{
+	font-family: "Arial";
+	border:none;
+	cursor: pointer;
+	font-size: 10px;
+}
+	
