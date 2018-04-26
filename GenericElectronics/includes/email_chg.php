@@ -2,7 +2,7 @@
 
 if(isset($_POST['email_chg']))
 {
-	include 'db_login.php';
+	include 'dbconnect.php';
 	session_start();
 
 	$email1= mysqli_real_escape_string($conn, $_POST["new_email"]);

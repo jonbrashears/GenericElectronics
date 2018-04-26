@@ -1,5 +1,5 @@
 <?php
-include 'navigation.php';
+include 'employeenav.php';
 include 'footer.php';
 ?>
 
@@ -57,12 +57,18 @@ include 'footer.php';
 			
 	
 			<p style="font-size:20px; margin: 0px 8px;font-family: 'Arial';">Sign Up For Generic Electronics! </p></br>
-				<form method="POST" action="includes/signup_inc.php">
+				<form method="POST" action="includes/employeesignup_inc.php">
 				<input type="text" placeholder="Enter Username (Between 5 and 20 characters)" name="username" minlength="5" maxlength="20" required>
 				</br>
 				<input type="password" placeholder="Enter Password (8 characters)" name="password" minlength="8" required>
 				</br>
 				<input type="password" placeholder="Enter Password Again" name="password2" minlength="8" required>
+				</br>
+				
+				<input type="text" placeholder="First Name" name="first" required>
+				</br>
+				
+				<input type="text" placeholder="Last Name" name="last" required>
 				</br>
 				
 				<input type="text" placeholder="Enter E-mail" name="email" required>
@@ -79,13 +85,10 @@ include 'footer.php';
 				
 				<input type="text" placeholder="ZIP Code" name="zip" maxlength="5" minlength="5" required>
 				</br>
+				
 				<button type="submit" name="signup">Sign Up</button>	
-				</br>
-				</br>
-				</br>
-				</br>
 
 		</form>
-		</br>
+	
 	</body>
 </html>

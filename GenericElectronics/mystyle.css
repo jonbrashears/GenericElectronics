@@ -65,7 +65,7 @@
 		font-family: "Arial";
 		text-decoration: none;
 		background-color: black;
-		color: black;
+		color: white;
 	}
 	
 	.navbar .dropdown-menu{
@@ -217,6 +217,18 @@
 	  width: 100%;
 	  font-family: "Arial";
     }	
+	
+	footer a{
+		color: white;
+		text-decoration: none;
+		font-size: 10px;
+	}
+	
+	footer a:hover{
+		color: white;
+		text-decoration: none;
+		font-size: 10px;
+	}
 	
 	div[name="profile_box"]
 {

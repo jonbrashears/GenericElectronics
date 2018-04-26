@@ -13,19 +13,19 @@ if(isset($_POST['addy_chg']))
 	
 	if (empty ($newAdd) && empty($newCity) && empty($newState) && empty($newZip))
 	{
-		header("Location: ../address_edit.php?all_empty");
+		header("Location: ../employeeaddress_edit.php?all_empty");
 		exit();
 	}
 	else
 	{
 		if (!preg_match('/^[a-zA-Z]{2}$/',$newState))
 			{
-				header("Location: ../address_edit.php?invalid_state");
+				header("Location: ../employeeaddress_edit.php?invalid_state");
 				exit();
 			}
 		if (!preg_match('/^[0-9]{5}$/',$newZip) && !empty($newZip))
 			{
-				header("Location: ../address_edit.php?invalid_zip");
+				header("Location: ../employeeaddress_edit.php?invalid_zip");
 				exit();
 			}
 		if (empty($newAdd))
@@ -45,7 +45,7 @@ if(isset($_POST['addy_chg']))
 			$newZip= $_SESSION['zip'];
 		}
 		
-		$sql="UPDATE customers SET address='$newAdd', city='$newCity', state='$newState', zipcode='$newZip' WHERE user_id ='$uid'";
+		$sql="UPDATE employee SET address='$newAdd', city='$newCity', state='$newState', zipcode='$newZip' WHERE employee_username ='$uid'";
 		
 		if(!mysqli_query($conn,$sql))
 		{
@@ -58,7 +58,7 @@ if(isset($_POST['addy_chg']))
 				$_SESSION['city']= $newCity;
 				$_SESSION['state']=$newState;
 				$_SESSION['zip']=$newZip;
-				header("Location: ../profile.php?update_add=success");
+				header("Location: ../employeeprofile.php?update_add=success");
 				exit();
 		}
 	}

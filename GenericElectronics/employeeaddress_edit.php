@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include('employeenav.php');
+include('navigation.php');
 include ('footer.php'); 
 ?>
 <link rel="stylesheet" type="text/css" href="edit_style.css">
@@ -15,7 +15,7 @@ input[name="zip"]
 </style>
 
 <body>
-			<form method="POST" action="includes/employeeaddress_chg.php">
+			<form method="POST" action="includes/address_chg.php">
 			<input type="text" name="address" placeholder="Address"></br>
 			<input type="text" name="city" placeholder="City"></br>
 			<input type="text" name="state" placeholder="State" maxlength="2" minlength="2"></br>

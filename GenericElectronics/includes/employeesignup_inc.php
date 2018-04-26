@@ -7,6 +7,8 @@ if (isset($_POST['signup']))
 	$uid = mysqli_real_escape_string($conn,$_POST["username"]);
 	$upwd = mysqli_real_escape_string($conn,$_POST["password"]);
 	$pwd2 = mysqli_real_escape_string($conn, $_POST["password2"]);
+	$first = mysqli_real_escape_string($conn, $_POST["first"]);
+	$last = mysqli_real_escape_string($conn, $_POST["last"]);
 	$uemail = mysqli_real_escape_string($conn,$_POST["email"]);
 	$address = mysqli_real_escape_string($conn,$_POST["address"]);
 	$city = mysqli_real_escape_string($conn,$_POST["city"]);
@@ -14,26 +16,26 @@ if (isset($_POST['signup']))
 	$zip = mysqli_real_escape_string($conn,$_POST["zip"]);
 
 	// Error checking for empty fields. Since we are using HTML to check for this, they shouldnt be empty, but... 
-	if (empty($uid) ||empty($upwd) ||empty($uemail) ||empty($address) ||empty($city) ||empty($state) || empty($zip))
+	if (empty($uid) ||empty($upwd) ||empty($uemail) ||empty($address) ||empty($city) ||empty($state) || empty($zip) || empty($first) || empty($last))
 	{
-	header("Location: ../signup.php?login=empty");
+	header("Location: ../employeesignup.php?login=empty");
 	exit();
 		
 	}
 	elseif($upwd != $pwd2)
 	{
-		header("Location: ../signup.php?login=badPwd2");
+		header("Location: ../employeesignup.php?login=badPwd2");
 		exit();
 	}
 	else
 	if(!filter_var($uemail,FILTER_VALIDATE_EMAIL))
 	{
-		header("Location: ../signup.php?login=invalid2");
+		header("Location: ../employeesignup.php?login=invalid2");
 		exit();
 	}
 	elseif (strlen($upwd) < 8)
 	{
-		header("Location: ../signup.php?login=Pass2Short");
+		header("Location: ../employeesignup.php?login=Pass2Short");
 		exit();
 	}
 	else
@@ -44,14 +46,14 @@ if (isset($_POST['signup']))
 		
 		if ($rCheck > 0)
 		{
-			header("Location: ../signup.php?login=error1");
+			header("Location: ../employeesignup.php?login=error1");
 			exit();
 		}
 		else
 		{
 			if (!preg_match('/^[0-9]{5}$/',$zip))
 			{
-				header("Location: ../signup.php?login=error");
+				header("Location: ../employeesignup.php?login=error");
 				exit();
 			}
 			// This is our function for hashing in a seperate file because we use it on several pages. 
@@ -60,16 +62,16 @@ if (isset($_POST['signup']))
 			$saltPW = habadasher($upwd, $salt);
 			
 			// Our SQL statement for inserting into table. 
-			$sql = "INSERT INTO customers (user_id, password, email, address, city, state, zipcode, salt) VALUES ('$uid', '$saltPW', '$uemail', '$address', '$city', '$state', '$zip' ,'$salt')";
+			$sql = "INSERT INTO employee (employee_username, password, email, first_name, last_name, address, city, state, zipcode, salt) VALUES ('$uid', '$saltPW', '$uemail', '$first', '$last', '$address', '$city', '$state', '$zip' ,'$salt')";
 			
 			if(!mysqli_query($conn,$sql))
 			{
-				header("Location: ../signup.php?signup=fail");
+				header("Location: ../employeesignup.php?signup=fail");
 				exit();
 			}	
 			else
 			{
-				header("Location: ../signup.php?signup=success");
+				header("Location: ../employeesignup.php?signup=success");
 				exit();
 			
 			}
@@ -77,12 +79,12 @@ if (isset($_POST['signup']))
 	}
 
 	{
-	header("Location: ../signup.php?login=error");
+	header("Location: ../employeesignup.php?login=error");
 	exit();
 	}
 }
 else 
-	header("Location: ../signup.php");
+	header("Location: ../employeesignup.php");
 	exit();
 
 ?>

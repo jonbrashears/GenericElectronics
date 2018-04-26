@@ -6,7 +6,7 @@ include('includes/dbconnect.php');
 
 ?>
 <head>
-  <title>Generic Electronics</title>
+  <title>Generic Electronics Employee Portal</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -16,7 +16,7 @@ include('includes/dbconnect.php');
 </head>
 <div class="jumbotron">
   <div class="container text-center">
-	<h1><a href="index.php">Generic Electronics</a></h1>      
+	<h1><a href="employee.php">Generic Electronics Employee Portal</a></h1>      
   </div>
 </div>
 
@@ -25,18 +25,16 @@ include('includes/dbconnect.php');
   <div class="container-fluid">
       <ul class="nav navbar-nav navbar-left">
 	  <form class="form-inline">
-		<a href="#" class="btn btn-link">Shopping Cart</a>
-		<a href="prdctindex.php" class="btn btn-link">Products</a>
-		<a href="manufacturerindex.php" class="btn btn-link">Manufacturers</a>
+		<a href="employee.php" class="btn btn-link">Home</a>
+		<a href="prdctindex.php" class="btn btn-link"></a>
+		<a href="Warehouse.php" class="btn btn-link">Warehouse</a>
 		<div class="dropdown">
 			<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown">
-			Categories
+			Customer Service
 			<span class="caret"></span></button>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="category.php?category=Audio"> Audio</a>
-				<a class="dropdown-item" href="category.php?category=Gaming"> Gaming</a>
-				<a class="dropdown-item" href="category.php?category=Computer"> Computer</a>
-				<a class="dropdown-item" href="category.php?category=Television"> Television</a>
+				<a class="dropdown-item" href="#"> Orders </a>
+				<a class="dropdown-item" href="customers.php"> Customers</a>
 			</div>
 		</div>
       </ul>
@@ -44,11 +42,10 @@ include('includes/dbconnect.php');
 	  <ul class="nav navbar-nav navbar-right">
 		<form class="form-inline">
 		<?php if (!isset($_SESSION['user_id'])){?>
-		<a href="signup.php" class="btn btn-link">Sign Up</a>
 		<a href="login.php" class="btn btn-link">Log In</a>
 		<?php }else {?>
-		<a href="profile.php" class="bth btn-link">Welcome, <?php echo $_SESSION['user_id'] ?></a>
-		<a href="logout.php" class="btn btn-link">Log Out</a>
+		<a href="employeeprofile.php" class="bth btn-link">Welcome, <?php echo $_SESSION['user_id'] ?></a>
+		<a href="employeelogout.php" class="btn btn-link">Log Out</a>
 		<?php }?>
 		
 	  </ul>
